@@ -25,6 +25,7 @@ const Banner = () => {
         </div>
       </div>
       {/* hello */}
+      {/* let's talk now */}
       <div>
         scroll down 
       </div>
