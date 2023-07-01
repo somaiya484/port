@@ -1,13 +1,84 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+  background:  linear-gradient(92.23deg,
+  rgb(150, 2, 150),
+  rgb(95, 35, 215));
+  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn2 {
+  background: transparent;
+  border-color: rgb(95, 35, 215);
+  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.btn:hover {
+  background:  linear-gradient(92.23deg,
+  rgb(95, 35, 215), rgb(150, 2, 150));
+}
+
+.btn2:hover {
+  background:  linear-gradient(92.23deg,
+  rgb(95, 35, 215), rgb(150, 2, 150));
+}
+
+.gradient,
+.active {
+  background: linear-gradient(
+    92.23deg,
+    rgb(150, 2, 150),
+    rgb(95, 35, 215)
+  );
+}
+
+.active {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+@layer base {
+  body {
+    @apply  leading-8 text-white;
+  }
+  .h2 {
+    @apply font-primary text-[35px]  mb-6 tracking-[10%] uppercase font-semibold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+  .h3 {
+    @apply font-primary font-normal text-[22px] mb-3 leading-[30px];
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .btn {
+    @apply rounded font-primary text-white font-medium;
+  }
+  .btn2 {
+    @apply rounded-full font-primary text-white font-medium;
+  }
+  .btn-sm {
+    @apply h-[48px] px-6 text-sm;
+  }
+  .btn-lg {
+    @apply h-[56px] px-16 text-base;
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3];
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .section{
+    @apply py-8 lg:py-16 flex items-center;
+  }
 }
