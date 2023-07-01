@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import {BsGithub, BsLinkedin, BsDownload} from 'react-icons/bs'
-import resume from '../assets/Resume (4).pdf'
+import resume from '../assets/Resume (7).pdf'
 
 const Banner = () => {
   return (
